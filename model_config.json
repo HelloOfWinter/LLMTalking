@@ -1,0 +1,17 @@
+{
+  "v4": {
+    "sovits_path": "D:\\AI\\GPT-SoVITS\\SoVITS_weights_v4\\Ye.pth",
+    "gpt_path": "D:\\AI\\GPT-SoVITS\\GPT_weights_v4\\Ye.ckpt",
+    "version": "v4",
+    "device": "cuda",
+    "is_half": true,
+    "description": "v4版本模型，支持48k音频输出"
+  },
+  "default": {
+    "sovits_path": "D:\\AI\\GPT-SoVITS\\SoVITS_weights_v4\\Ye.pth",
+    "gpt_path": "D:\\AI\\GPT-SoVITS\\GPT_weights_v4\\Ye.ckpt",
+    "version": "v4",
+    "device": "cuda",
+    "is_half": true
+  }
+}

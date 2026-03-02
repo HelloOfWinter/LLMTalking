@@ -1,0 +1,33 @@
+# Core
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+websockets>=12.0
+python-multipart>=0.0.6
+
+# ASR
+transformers>=4.35.0
+torch>=2.1.0
+torchaudio>=2.1.0
+soundfile>=0.12.1
+
+# LLM (local)
+accelerate>=0.24.0
+bitsandbytes>=0.41.0
+peft>=0.7.0
+scipy>=1.11.0
+
+# LLM (API calls)
+requests>=2.31.0
+
+# TTS (Genie)
+genie-tts>=0.1.2
+onnxruntime-gpu>=1.16.0  # or onnxruntime for CPU
+
+# Audio processing
+numpy>=1.24.0
+
+# WebUI
+gradio>=4.0.0
+
+# Utilities
+pydantic>=2.4.0
