@@ -32,11 +32,14 @@ cd server
 pip install -r requirements.txt
 注意：本仓库不包含 Genie-TTS 的模型代码，您需要自行克隆并安装：
 
-bash
+
 # 在主目录下克隆 Genie-TTS
 git clone https://github.com/High-Logic/Genie-TTS.git
 cd Genie-TTS
 Genie-TTS 是轻量级推理引擎的核心，用于将 GPT-SoVITS 模型转换为 ONNX 并进行高性能合成。
+
+安装环境：
+pip install -r requirements.txt
 
 3. 配置 Godot 客户端
 下载 Godot 4.6 Mono 版
@@ -117,3 +120,4 @@ HuggingFace Transformers、Whisper、FastAPI、Gradio 等开源库。
 本项目采用 MIT 许可证。您可以自由使用、修改和分发，但需保留原版权声明。详见 LICENSE 文件。
 
 开始创造您的数字生命吧！ 🎉
+
