@@ -1,33 +1,49 @@
-# Core
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-websockets>=12.0
-python-multipart>=0.0.6
+# ==================== LLMTalking 后端依赖 ====================
+# 使用前请确保 Python 版本为 3.11.9
+# 生成自用户环境 pip list (2026-03-03)
 
-# ASR
-transformers>=4.35.0
-torch>=2.1.0
-torchaudio>=2.1.0
-soundfile>=0.12.1
+# ---------- Web 框架与 API ----------
+fastapi==0.128.0
+uvicorn[standard]==0.40.0
+websockets==12.0
+pydantic==2.10.6
+pydantic-settings==2.12.0
+python-dotenv==1.2.1
+pyyaml==6.0.3
+jinja2==3.1.6
 
-# LLM (local)
-accelerate>=0.24.0
-bitsandbytes>=0.41.0
-peft>=0.7.0
-scipy>=1.11.0
+# ---------- WebUI ----------
+gradio==4.44.1
 
-# LLM (API calls)
-requests>=2.31.0
+# ---------- 深度学习核心 ----------
+torch==2.7.1                # 基础版本，请按需选择 CUDA 版本安装
+torchaudio==2.7.1
+transformers==4.57.6
+accelerate==1.12.0
+peft==0.17.1
+bitsandbytes==0.49.1        # 用于 4/8-bit 量化
+sentencepiece==0.2.1
+tokenizers==0.22.2
+huggingface-hub==0.36.0
 
-# TTS (Genie)
-genie-tts>=0.1.2
-onnxruntime-gpu>=1.16.0  # or onnxruntime for CPU
+# ---------- 音频处理 ----------
+librosa==0.11.0
+soundfile==0.13.1
+numpy==2.3.5
+scipy==1.17.0
+openai-whisper==20250625    # Whisper ASR 模型
 
-# Audio processing
-numpy>=1.24.0
+# 可选：若使用阿里巴巴 FunASR，请取消下面一行的注释
+# funasr==1.0.27
 
-# WebUI
-gradio>=4.0.0
+# ---------- 实用工具 ----------
+tqdm==4.67.1
+requests==2.32.5
+filelock==3.20.3
+datasets==4.5.0              # 用于数据集加载（如需）
 
-# Utilities
-pydantic>=2.4.0
+# ---------- 说明 ----------
+# 1. Genie-TTS 需单独安装，请参见 README
+# 2. 如需 GPU 加速，请根据 CUDA 版本安装对应的 PyTorch（例如 CUDA 12.8 使用：
+#    pip install torch==2.7.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+# 3. 若遇到版本冲突，可尝试使用 `pip install -r requirements.txt --no-deps` 后手动解决
